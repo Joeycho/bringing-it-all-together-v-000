@@ -72,7 +72,7 @@ class Dog
     #binding.pry
     dog_a = DB[:conn].execute(sql, name,breed)
 
-    if !dog_a.empty
+    if !dog_a.empty?
       dog_data = dog[0]
       dog = self.new(dog_data[0], dog_data[1], dog_data[2])
     else
