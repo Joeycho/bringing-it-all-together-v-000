@@ -70,7 +70,7 @@ class Dog
       SELECT * FROM dogs WHERE name = ?, breed = ?
     SQL
     binding.pry
-    dog_a = DB[:conn].execute(sql, name:name, breed:breed)
+    dog_a = DB[:conn].execute(sql, name,breed)
 
     if !dog_a.empty
       dog_data = dog[0]
