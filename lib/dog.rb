@@ -65,12 +65,12 @@ class Dog
     dog_o = self.new(id: dog[0],name: dog[1],breed: dog[2])
   end
 
-  def self.find_or_create_by(name, breed)
+  def self.find_or_create_by(name:, breed:)
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ?, breed = ?
     SQL
     #binding.pry
-    dog_a = DB[:conn].execute(sql, name, breed)
+    dog_a = DB[:conn].execute(sql, name:, breed:)
 
     if !dog_a.empty
       dog_data = dog[0]
