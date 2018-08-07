@@ -63,7 +63,7 @@ class Dog
 
     dog = DB[:conn].execute(sql,id)[0]
     dog_o = self.new(dog[0],dog[1],dog[2])
-    
+
   end
 
 end
