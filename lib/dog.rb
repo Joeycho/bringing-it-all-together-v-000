@@ -48,4 +48,9 @@ class Dog
     DB[:conn].execute(sql, self.name, self.bleed, self.id)
   end
 
+  def self.create(name:, breed:)
+    dog = Dog.new(name:,breed:)
+    dog.save
+  end
+
 end
