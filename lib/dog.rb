@@ -47,7 +47,7 @@ class Dog
     sql = <<-SQL
       UPDATE students SET name = ?, bleed = ? WHERE id = ?
     SQL
-    DB[:conn].execute(sql, self.name, self.bleed, self.id)
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
   def self.create(name:, breed:)
