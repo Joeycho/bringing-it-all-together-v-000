@@ -2,7 +2,7 @@ class Dog
 
   attr_accessor :name, :breed
   attr_reader :id
-  
+
   def initialize(id=nil, name, breed)
     @id = id
     @name = name
@@ -17,8 +17,10 @@ class Dog
       name TEXT,
       breed TEXT
     )
+    SQL
+    DB[:conn].execute(sql)
   end
 
+  def self.drop_table 
 
-  
 end
