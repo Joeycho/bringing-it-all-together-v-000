@@ -69,7 +69,7 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? AND breed = ?
     SQL
-    binding.pry
+    #binding.pry
     dog_a = DB[:conn].execute(sql, name,breed)
 
     if !dog_a.empty
